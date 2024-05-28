@@ -16,6 +16,9 @@ import EndCallButton from './EndCallButton'
 import Loader from './Loader'
 import { useRouter } from 'next/navigation'
 import { cn } from '../lib/utils'
+import { Button } from './ui/button'
+import { toast } from './ui/use-toast'
+import { useUser } from "@clerk/nextjs";
 
 
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right'
@@ -45,6 +48,10 @@ const MeetingRoom = () => {
         return <SpeakerLayout participantsBarPosition="left" />
     }
   }
+
+  const { user } = useUser();
+  const meetingId = user?.id;
+  const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}?personal=true`;
 
   return (
     <section className='relative h-screen w-full overflow-hidden pt-4 text-white'>
@@ -92,6 +99,18 @@ const MeetingRoom = () => {
           </div>
         </button>
         {!isPersonalRoom && <EndCallButton/>}
+
+        <Button
+          className="bg-dark-3 hover:bg-[#4c535b]"
+          onClick={() => {
+            navigator.clipboard.writeText(meetingLink);
+            toast({
+              title: "Link Copied",
+            });
+          }}
+        >
+          Copy Invitation
+        </Button>
       </div>
     </section>
   )
