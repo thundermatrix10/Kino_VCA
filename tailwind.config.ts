@@ -20,7 +20,7 @@ const config = {
     extend: {
       colors: {
         dark: {
-          1: '#191510',
+          1: '#1F2544',
           2: '#2c395b',
           3: '#040404',
           4: '#040404',
@@ -31,6 +31,7 @@ const config = {
         },
         blue: {
           1: '#2e414f',
+          2: '#006769', 
           // 1: '#0E78F9',
         },
         sky: {
@@ -43,7 +44,7 @@ const config = {
           // 1: '#FF742E',
         },
         purple: {
-          1: '#0c3d37',
+          1: '#028391',
           // 1: '#830EF9',
         },
         yellow: {
@@ -66,7 +67,7 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       backgroundImage: {
-        hero: "url('/images/hero-background.png')",
+        hero: "url('/images/h3.jpg')",
       },
     },
   },
