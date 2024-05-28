@@ -1,6 +1,7 @@
-import StreamVideoProvider from "@/providers/StreamClientProvider";
+// import StreamVideoProvider from "@/providers/StreamClientProvider";
 import { Metadata } from "next";
 import React, { ReactNode } from "react";
+import StreamVideoProvider from "../../providers/StreamClientProvider";
 
 export const metadata: Metadata = {
     title: "Kino VCA",

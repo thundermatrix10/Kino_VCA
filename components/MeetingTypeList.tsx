@@ -10,7 +10,7 @@ import ReactDatePicker from 'react-datepicker'
 import HomeCard from './HomeCard'
 import MeetingModal from './MeetingModal'
 
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "./ui/toaster"
 import { useToast } from './ui/use-toast'
 import { Textarea } from './ui/textarea'
 import { Input } from './ui/input'

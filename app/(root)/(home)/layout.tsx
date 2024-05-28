@@ -1,8 +1,10 @@
 import React, { ReactNode } from "react";
 
-import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/Sidebar";
+// import Navbar from "@/components/Navbar";
+// import Sidebar from "@/components/Sidebar";
 import { Metadata } from "next";
+import Navbar from "../../../components/Navbar";
+import Sidebar from "../../../components/Sidebar";
 
 export const metadata: Metadata = {
     title: "Kino VCA",

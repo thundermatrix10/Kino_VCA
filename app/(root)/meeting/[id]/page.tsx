@@ -1,13 +1,17 @@
 "use client";
 
-import Loader from '@/components/Loader';
-import MeetingRoom from '@/components/MeetingRoom';
-import MeetingSetup from '@/components/MeetingSetup';
-import { useGetCallById } from '@/hooks/useGetCallById';
+// import Loader from '../components/Loader';
+// import MeetingRoom from '../components/MeetingRoom';
+// import MeetingSetup from '../components/MeetingSetup';
+// import { useGetCallById } from '../hooks/useGetCallById';
 import { useUser } from '@clerk/nextjs';
 import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk';
 import { resourceUsage } from 'process';
 import React, { useState } from 'react'
+import Loader from '../../../../components/Loader';
+import MeetingRoom from '../../../../components/MeetingRoom';
+import MeetingSetup from '../../../../components/MeetingSetup';
+import { useGetCallById } from '../../../../hooks/useGetCallById';
 
 const Meeting = ({params: { id }}: {params: {id: string}}) => {
   const { user, isLoaded} = useUser();

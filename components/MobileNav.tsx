@@ -4,12 +4,13 @@ import React from 'react'
 
 import Image from 'next/image'
 
-import {Sheet,SheetClose,SheetContent,SheetTrigger} from "@/components/ui/sheet"
+import {Sheet,SheetClose,SheetContent,SheetTrigger} from "./ui/sheet"
 import Link from 'next/link'
-import { siderbarLinks } from '@/constants'
-import { cn } from '@/lib/utils'
+// import { siderbarLinks } from '@/constants'
+// import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
-  
+import { cn } from '../lib/utils'
+import { siderbarLinks } from '../constants'
 
 const MobileNav = () => {
   const pathname = usePathname();
