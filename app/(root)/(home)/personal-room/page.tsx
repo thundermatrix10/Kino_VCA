@@ -28,7 +28,7 @@ const Table = ({
       </h1>
     </div>
   );
-};
+}; 
 
 const PersonalRoom = () => {
   const router = useRouter();

@@ -32,6 +32,9 @@ const MeetingRoom = () => {
   const [showParticipants, setShowParticipants] = useState(false)
 
   const router = useRouter();
+  const { user } = useUser();
+  const meetingId = user?.id;
+  const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}?personal=true`;
 
   const { useCallCallingState } = useCallStateHooks();
   const callingState = useCallCallingState();
@@ -48,10 +51,6 @@ const MeetingRoom = () => {
         return <SpeakerLayout participantsBarPosition="left" />
     }
   }
-
-  const { user } = useUser();
-  const meetingId = user?.id;
-  const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}?personal=true`;
 
   return (
     <section className='relative h-screen w-full overflow-hidden pt-4 text-white'>
