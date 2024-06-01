@@ -8,6 +8,6 @@ Have a peek: https://kino-vca.vercel.app/sign-in?redirect_url=https%3A%2F%2Fkino
 ## Acknowledgments
 
 - [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Clerk](https://clerk.dev/)
 - [Stream](https://getstream.io/)
-- [Tailwind CSS](https://tailwindcss.com/)
